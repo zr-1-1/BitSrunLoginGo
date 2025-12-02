@@ -228,3 +228,59 @@ func main() {
     }
 }
 ```
+适用于HIT校园网的简单配置文件示例：
+```yaml
+form:
+    # domain: www.wp.hit.edu.cn
+    domain: 10.160.251.62
+    username: "学号"
+    user_type: ""
+    password: "密码"
+meta:
+    "n": "200"
+    type: "8"
+    # acid已嗅探
+    acid: "27"
+    # enc已嗅探
+    enc: srun_bx1
+    os: Windows 11
+    name: windows
+    info_prefix: SRBX1
+    double_stack: false
+settings:
+    basic:
+        https: false
+        skip_cert_verify: true
+        timeout: 5
+        interfaces: ""
+        interfaces_interval: 0
+    guardian:
+        enable: false
+        duration: 300
+    backoff:
+        enable: false
+        max_retries: 0
+        initial_duration: 2
+        max_duration: 300
+        exponent_factor: 1
+        inter_const_factor: 0
+        outer_const_factor: 0
+    log:
+        debug_level: true
+        write_file: false
+        log_path: ./
+        log_name: "debug.txt"
+    ddns:
+        enable: false
+        ttl: 600
+        domain: www.example.com
+        provider: cloudflare
+        config:
+            zone: ""
+            token: ""
+    reality:
+        enable: false
+        addr: http://www.baidu.com
+    custom_header:
+        User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0
+```
